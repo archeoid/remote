@@ -8,18 +8,17 @@ import (
 	"sync"
 	"io/ioutil"
 )
-type Status byte;
 
 const (
-	Disconnected Status = 1
-	Connecting   Status = 2
-	Connected    Status = 3
+	Disconnected = 1
+	Connecting   = 2
+	Connected    = 3
 )
 
 type Client struct {
 	Send chan message.Message
 	Resv chan message.Message
-	Status Status
+	Status int
 	Conn *tls.Conn
 }
 
