@@ -5,7 +5,6 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"log"
-	"sync"
 	"io/ioutil"
 )
 
@@ -58,17 +57,7 @@ func Connect(ip string) Client {
 	return c
 }
 
-
-
-func Begin(c Client, wg * sync.WaitGroup) {
-	wg.Add(2)
-	go Read(c, wg)
-	go Write(c, wg)
-}
-
-func Read(c Client, wg * sync.WaitGroup) {
-	defer wg.Done()
-
+func Read(c Client) {
 	var size int
 	buf := make([]byte, 4)
 	for {
@@ -91,7 +80,7 @@ func Read(c Client, wg * sync.WaitGroup) {
 	log.Print("server: read end")
 }
 
-func Write(c Client, wg * sync.WaitGroup) {
+func Write(c Client) {
 	for {
 		msg := <- c.Send
 		log.Print("sending")
