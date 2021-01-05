@@ -6,7 +6,7 @@ import (
 	"crypto/x509"
 	"log"
 	"net"
-	"remote/internal/message"
+	"github.com/archeoid/remote/internal/message"
 	"sync"
 	"io/ioutil"
 )

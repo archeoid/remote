@@ -1,4 +1,4 @@
-module remote
+module github.com/archeoid/remote
 
 go 1.15
 

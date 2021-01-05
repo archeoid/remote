@@ -1,7 +1,7 @@
 package message
 
 import (
-	"remote/api"
+	"github.com/archeoid/remote/api"
 	flatbuffers "github.com/google/flatbuffers/go"
 	"encoding/binary"
 )

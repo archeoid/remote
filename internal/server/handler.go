@@ -1,7 +1,7 @@
 package server
 
 import (
-	"remote/internal/message"
+	"github.com/archeoid/remote/internal/message"
 	//"log"
 	"io/ioutil"
 )

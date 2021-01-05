@@ -1,7 +1,7 @@
 package client
 
 import (
-	"remote/internal/message"
+	"github.com/archeoid/remote/internal/message"
 	"crypto/tls"
 	"crypto/x509"
 	"log"

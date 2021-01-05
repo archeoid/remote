@@ -1,7 +1,7 @@
 package main
 import (
-	"remote/internal/client"
-	"remote/internal/message"
+	"github.com/archeoid/remote/internal/client"
+	"github.com/archeoid/remote/internal/message"
 	"log"
 	"sync"
 )
@@ -19,3 +19,5 @@ func main() {
 
 	log.Print("")
 }
+
+
