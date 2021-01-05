@@ -1,6 +1,6 @@
 package main
 import (
-	"remote/internal/server"
+	"github.com/archeoid/remote/pkg/server"
 	"log"
 )
 

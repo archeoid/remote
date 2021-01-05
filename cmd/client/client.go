@@ -1,10 +1,13 @@
 package main
 import (
-	"github.com/archeoid/remote/internal/client"
-	"github.com/archeoid/remote/internal/message"
+	"github.com/archeoid/remote/pkg/client"
+	"github.com/archeoid/remote/pkg/message"
 	"log"
 	"sync"
 )
+
+
+
 
 func main() {
 	c := client.Connect("192.168.0.8:12340")
