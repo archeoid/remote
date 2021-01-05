@@ -14,6 +14,11 @@ const (
 	Connected    = 3
 )
 
+type Test struct {
+	Send chan []byte
+	Resv chan []byte
+}
+
 type Client struct {
 	Send chan message.Message
 	Resv chan message.Message
