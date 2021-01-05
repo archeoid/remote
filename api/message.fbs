@@ -1,0 +1,12 @@
+namespace api;
+
+enum Action : ubyte { None = 0, Request, Response }
+
+table MessageBuffer
+{
+    action:Action; 
+    subject:string;
+    content:string;
+}
+
+root_type MessageBuffer;
